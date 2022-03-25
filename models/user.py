@@ -8,7 +8,7 @@ users = Table(
  Column('name',String(50)),
  Column('age',Integer),
  Column('message',String(50)),
- Column('CreateDate',Date)
+ Column('createDate',Date)
 )
 
 meta.create_all(engine)
