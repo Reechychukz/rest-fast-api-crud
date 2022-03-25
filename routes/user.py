@@ -9,15 +9,15 @@ from sqlalchemy import func, select
 user = APIRouter()
 
 @user.get("/")
-async def read_data():
+async def get_all_users():
  return conn.execute(users.select()).fetchall()
 
 @user.get("/{id}")
-async def read_data(id: int):
+async def get_user_by_id(id: int):
  return conn.execute(users.select().where(users.c.id == id)).fetchall()
 
 @user.post("/")
-async def write_data(user: User):
+async def create_data(user: User):
  conn.execute(users.insert().values(
   name = user.name,
   age = user.age,
