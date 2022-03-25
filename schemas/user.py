@@ -5,4 +5,4 @@ class User(BaseModel):
  name : str
  age : int
  message : str
- createDate : date.today
+ createDate : date

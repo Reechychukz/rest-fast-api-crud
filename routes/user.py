@@ -22,7 +22,7 @@ async def create_data(user: User):
   name = user.name,
   age = user.age,
   message = user.message,
-  createDate = user.createDate.today
+  createDate = user.createDate
  ))
  return conn.execute(users.select()).fetchall()
 
